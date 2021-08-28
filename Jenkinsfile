@@ -3,9 +3,7 @@ pipeline{
         stages{
             stage('test'){
                 steps{
-                    dir("API-REST_Service_Technical_Test"){
-                        sh "gradle clean test --info"
-                    }
+                    sh "clean test --info"
                 }
             }
             stage('Build application'){
