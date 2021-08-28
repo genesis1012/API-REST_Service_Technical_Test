@@ -3,7 +3,8 @@ pipeline {
 
         stages {
 
-            stage ('test') {
+            stage ('Test') {
+
                 steps {
 
                     echo "INGRESAR EN EL SH"
