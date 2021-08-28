@@ -1,9 +1,9 @@
-pipeline{
-    agent{ label 'master' }
-        stages{
-            stage('test'){
-                steps{
-                    sh "clean test --info"
+pipeline {
+    agent { label 'master' }
+        stages {
+            stage ('test') {
+                steps {
+                    sh 'gradle clean test --info'
                 }
             }
             stage('Build application'){
