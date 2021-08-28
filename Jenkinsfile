@@ -14,7 +14,7 @@ pipeline {
                 }
             }
 
-            stage ('Build application') {  
+            stage ('Build application') {
                 steps {
                     echo "prueba compilacion archivo Jenkinsfile"
                 }
