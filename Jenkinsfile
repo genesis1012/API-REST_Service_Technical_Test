@@ -16,5 +16,11 @@ pipeline {
                     echo "prueba compilacion archivo Jenkinsfile"
                 }
             }
+
+            stage ('create image') {
+                steps {
+                    echo "create image"
+                }
+            }
         }
 }
