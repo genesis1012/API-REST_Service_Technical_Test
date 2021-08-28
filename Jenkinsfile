@@ -7,7 +7,7 @@ pipeline {
 
                 steps {
 
-                    echo "INGRESAR EN EL SH"
+                    echo "INGRESAR EN EL SH "
 
                     bat "gradle clean test --info"
 
