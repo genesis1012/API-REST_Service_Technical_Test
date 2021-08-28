@@ -6,6 +6,8 @@ pipeline {
             stage ('test') {
                 steps {
 
+                    echo "INGRESAR EN EL SH"
+
                     sh "gradle clean test --info"
 
                 }
