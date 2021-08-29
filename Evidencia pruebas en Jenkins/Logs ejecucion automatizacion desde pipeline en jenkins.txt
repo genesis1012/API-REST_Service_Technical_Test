@@ -1,0 +1,286 @@
+Ejecutado porque se detectaron cambios en el repositorio
+Obtained Jenkinsfile from git https://github.com/genesis1012/API-REST_Service_Technical_Test.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins  in C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Program Files\Git\bin\git.exe rev-parse --resolve-git-dir C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git.exe config remote.origin.url https://github.com/genesis1012/API-REST_Service_Technical_Test.git # timeout=10
+Fetching upstream changes from https://github.com/genesis1012/API-REST_Service_Technical_Test.git
+ > C:\Program Files\Git\bin\git.exe --version # timeout=10
+ > git --version # 'git version 2.33.0.windows.2'
+ > C:\Program Files\Git\bin\git.exe fetch --tags --force --progress -- https://github.com/genesis1012/API-REST_Service_Technical_Test.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\bin\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+Checking out Revision c26cad60a6c296ed40522903566cdd24ef177610 (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git.exe checkout -f c26cad60a6c296ed40522903566cdd24ef177610 # timeout=10
+Commit message: "Merge pull request #16 from genesis1012/feature/continuarAuto"
+ > C:\Program Files\Git\bin\git.exe rev-list --no-walk 4985e886f1c82c5f04e2ace591369b8244aec77a # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build application)
+[Pipeline] echo
+Building..
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test application)
+[Pipeline] echo
+Test application execution
+[Pipeline] bat
+
+C:\Windows\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile>gradle clean test --info 
+Initialized native services in: C:\Windows\System32\config\systemprofile\.gradle\native
+Removing daemon from the registry due to communication failure. Daemon information: DaemonInfo{pid=6628, address=[0c5adae0-28b8-45e0-8781-034b41c26cfd port:56944, addresses:[/127.0.0.1]], state=Idle, lastBusy=1630250853322, context=DefaultDaemonContext[uid=8ed61d3e-3727-4adc-86c8-5190c4402924,javaHome=C:\Program Files\Java\jdk1.8.0_281,daemonRegistryDir=C:\Windows\System32\config\systemprofile\.gradle\daemon,pid=6628,idleTimeout=10800000,priority=NORMAL,daemonOpts=-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=windows-1252,-Duser.country=ES,-Duser.language=es,-Duser.variant]}
+Removing 0 daemon stop events from registry
+Previous Daemon (8316) stopped at Sun Aug 29 10:27:27 COT 2021 by user or operating system
+Previous Daemon (6628) stopped at Sun Aug 29 10:53:17 COT 2021 by user or operating system
+Starting a Gradle Daemon, 1 incompatible and 2 stopped Daemons could not be reused, use --status for details
+Starting process 'Gradle build daemon'. Working directory: C:\Windows\System32\config\systemprofile\.gradle\daemon\6.8.2 Command: C:\Program Files\Java\jdk1.8.0_281\bin\java.exe -XX:MaxMetaspaceSize=256m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx512m -Dfile.encoding=windows-1252 -Duser.country=ES -Duser.language=es -Duser.variant -cp C:\Gradle\gradle-6.8.2\lib\gradle-launcher-6.8.2.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 6.8.2
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 1.223 secs.
+The client will now receive all logging from the daemon (pid: 4720). The daemon log file: C:\Windows\System32\config\systemprofile\.gradle\daemon\6.8.2\daemon-4720.out.log
+Starting build in new daemon [memory: 455.5 MiB]
+Closing daemon's stdin at end of input.
+The daemon will no longer process any standard input.
+Using 4 worker leases.
+Watching the file system is disabled
+Starting Build
+Settings evaluated using settings file 'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build.gradle'.
+Included projects: [root project 'API-REST_Service_Technical_Test']
+
+> Configure project :
+Evaluating root project 'API-REST_Service_Technical_Test' using build file 'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build.gradle'.
+SerenityPlugin:checkOutcomes: reportDirectory = C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\target\site\serenity
+All projects evaluated.
+Selected primary task 'clean' from project :
+Selected primary task 'test' from project :
+Tasks to be executed: [task ':clearReports', task ':clean', task ':compileJava', task ':processResources', task ':classes', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test']
+Tasks that were excluded: []
+:clearReports (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :clearReports
+Caching disabled for task ':clearReports' because:
+  Build cache is disabled
+Task ':clearReports' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:clearReports (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.636 secs.
+:clean (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :clean
+Caching disabled for task ':clean' because:
+  Build cache is disabled
+Task ':clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:clean (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.054 secs.
+:compileJava (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :compileJava
+Cache entries evicted. In-memory cache of C:\Windows\System32\config\systemprofile\.gradle\caches\journal-1\file-access.bin: Size{376} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=1} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Cache entries evicted. In-memory cache of C:\Windows\System32\config\systemprofile\.gradle\caches\journal-1\file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=41} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Cache entries evicted. In-memory cache of C:\Windows\System32\config\systemprofile\.gradle\caches\journal-1\file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=42} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Task ':compileJava' is not up-to-date because:
+  Output property 'destinationDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\classes\java\main has been removed.
+  Output property 'destinationDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\classes\java\main\com has been removed.
+  Output property 'destinationDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\classes\java\main\com\technical has been removed.
+The input changes require a full rebuild for incremental task ':compileJava'.
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with JDK Java compiler API.
+Created classpath snapshot for incremental compilation in 0.331 secs. 1048 duplicate classes found in classpath (see all with --debug).
+:compileJava (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 3.665 secs.
+:processResources (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :processResources NO-SOURCE
+file or directory 'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\src\main\resources', not found
+Skipping task ':processResources' as it has no source files and no previous output files.
+:processResources (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.002 secs.
+:classes (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :classes
+Skipping task ':classes' as it has no actions.
+:classes (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.0 secs.
+:compileTestJava (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :compileTestJava
+Cache entries evicted. In-memory cache of C:\Windows\System32\config\systemprofile\.gradle\caches\journal-1\file-access.bin: Size{400} MaxSize{400}, CacheStats{hitCount=0, missCount=0, loadSuccessCount=0, loadExceptionCount=0, totalLoadTime=0, evictionCount=81} 
+Performance may suffer from in-memory cache misses. Increase max heap size of Gradle build process to reduce cache misses.
+Caching disabled for task ':compileTestJava' because:
+  Build cache is disabled
+Task ':compileTestJava' is not up-to-date because:
+  Output property 'destinationDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\classes\java\test has been removed.
+  Output property 'destinationDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\classes\java\test\com has been removed.
+  Output property 'destinationDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\classes\java\test\com\technical has been removed.
+The input changes require a full rebuild for incremental task ':compileTestJava'.
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with JDK Java compiler API.
+Created classpath snapshot for incremental compilation in 0.019 secs. 1048 duplicate classes found in classpath (see all with --debug).
+:compileTestJava (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.766 secs.
+:processTestResources (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :processTestResources
+Caching disabled for task ':processTestResources' because:
+  Build cache is disabled
+Task ':processTestResources' is not up-to-date because:
+  Output property 'destinationDir' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\resources\test has been removed.
+  Output property 'destinationDir' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\resources\test\feature has been removed.
+  Output property 'destinationDir' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\resources\test\feature\serviceRESTAPI.feature has been removed.
+:processTestResources (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.038 secs.
+:testClasses (Thread[Execution worker for ':' Thread 3,5,main]) started.
+
+> Task :testClasses
+Skipping task ':testClasses' as it has no actions.
+:testClasses (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 0.0 secs.
+:test (Thread[Execution worker for ':' Thread 3,5,main]) started.
+Gradle Test Executor 1 started executing tests.
+
+> Task :test
+Caching disabled for task ':test' because:
+  Build cache is disabled
+Task ':test' is not up-to-date because:
+  Output property 'binaryResultsDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\test-results\test\binary has been removed.
+  Output property 'binaryResultsDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\test-results\test\binary\output.bin has been removed.
+  Output property 'binaryResultsDirectory' file C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\test-results\test\binary\output.bin.idx has been removed.
+Starting process 'Gradle Test Executor 1'. Working directory: C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile Command: C:\Program Files\Java\jdk1.8.0_281\bin\java.exe -Djava.security.manager=worker.org.gradle.process.internal.worker.child.BootstrapSecurityManager -Dorg.gradle.native=false -Xmx512m -Dfile.encoding=windows-1252 -Duser.country=ES -Duser.language=es -Duser.variant -ea -cp C:\Windows\System32\config\systemprofile\.gradle\caches\6.8.2\workerMain\gradle-worker.jar worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 1'
+Successfully started process 'Gradle Test Executor 1'
+
+com.technical.test.Runners.ServiceRestApiTestRunner STANDARD_ERROR
+    [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+
+    -------------------------------------------------------------------------------------
+         _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+        /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+       |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+        \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+    .----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+    |_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+     News and tutorials at http://www.serenity-bdd.info                                  
+     Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+     Join the Serenity Community on Rocket Chat at https://serenity-bdd.rocket.chat      
+     Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+     Learn Serenity BDD online at http://serenity-dojo.com                               
+    -------------------------------------------------------------------------------------
+
+    [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: consume geonames.org service
+    [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+     _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+    |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+      | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+      | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+      |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+    TEST STARTED: consult countries by latitude and longitude
+    -------------------------------------------------------------------(consume-geonames.org-service;consult-countries-by-latitude-and-longitude)
+
+com.technical.test.Runners.ServiceRestApiTestRunner > consume geonames.org service.consult countries by latitude and longitude STANDARD_OUT
+    {
+        "sunrise": "2021-08-29 05:30",
+        "lng": 20,
+        "countryCode": "TD",
+        "gmtOffset": 1,
+        "rawOffset": 1,
+        "sunset": "2021-08-29 17:50",
+        "timezoneId": "Africa/Ndjamena",
+        "dstOffset": 1,
+        "countryName": "Chad",
+        "time": "2021-08-29 16:54",
+        "lat": 10
+    }
+
+com.technical.test.Runners.ServiceRestApiTestRunner > consume geonames.org service.consult countries by latitude and longitude STANDARD_ERROR
+    [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+            __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+      _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+     (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+      _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+     (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+            /_/                                                                
+
+    TEST PASSED: consult countries by latitude and longitude
+    ----------------------------------------------------------------------------
+
+com.technical.test.Runners.ServiceRestApiTestRunner STANDARD_ERROR
+    [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+     _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+    |_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+      | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+      | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+      |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+    TEST STARTED: consult countries by latitude and longitude out of phase
+    -------------------------------------------------------------------(consume-geonames.org-service;consult-countries-by-latitude-and-longitude-out-of-phase)
+
+com.technical.test.Runners.ServiceRestApiTestRunner > consume geonames.org service.consult countries by latitude and longitude out of phase STANDARD_OUT
+    {
+        "status": {
+            "message": "invalid lat/lng",
+            "value": 14
+        }
+    }
+
+com.technical.test.Runners.ServiceRestApiTestRunner > consume geonames.org service.consult countries by latitude and longitude out of phase STANDARD_ERROR
+    [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+            __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+      _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+     (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+      _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+     (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+            /_/                                                                
+
+    TEST PASSED: consult countries by latitude and longitude out of phase
+    ----------------------------------------------------------------------------
+
+com.technical.test.Runners.ServiceRestApiTestRunner STANDARD_OUT
+
+    2 Scenarios ([32m2 passed[0m)
+    4 Steps ([32m4 passed[0m)
+    0m6,824s
+
+
+Gradle Test Executor 1 finished executing tests.
+
+> Task :test
+Finished generating test XML results (0.018 secs) into: C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\test-results\test
+Generating HTML test report...
+Finished generating test html results (0.034 secs) into: C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\build\reports\tests\test
+:test (Thread[Execution worker for ':' Thread 3,5,main]) completed. Took 11.721 secs.
+
+BUILD SUCCESSFUL in 25s
+6 actionable tasks: 6 executed
+Configuration Cache (C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\.gradle\configuration-cache) removing files not accessed on or after Sun Aug 22 10:53:40 COT 2021.
+Configuration Cache (C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\.gradle\configuration-cache) cleaned up in 0.002 secs.
+VCS Checkout Cache (C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\.gradle\vcs-1) removing files not accessed on or after Sun Aug 22 10:53:19 COT 2021.
+VCS Checkout Cache (C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\automation_integration_Jenkinsfile\.gradle\vcs-1) cleaned up in 0.0 secs.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy)
+[Pipeline] echo
+Deploying....
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
