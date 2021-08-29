@@ -11,7 +11,7 @@ pipeline {
                 steps {
                     echo "Test application execution"
 
-                    bat "gradle clean test"
+                    bat "gradle clean test --info"
                 }
             }
             stage ('Deploy') {
