@@ -8,11 +8,15 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static com.technical.test.utils.webServices.CONSULT;
 import static com.technical.test.utils.constanst.*;
 
-public class customerRegistration implements Task {
+public class consumeService implements Task {
 
     private String consultUsers;
+    private int Lng;
+    private int Lat;
 
-    public customerRegistration() {
+    public consumeService(Integer Lng, Integer Lat) {
+        this.Lng = Lng;
+        this.Lat = Lat;
         this.consultUsers = CONSULT.toString();
     }
 
@@ -24,13 +28,13 @@ public class customerRegistration implements Task {
                                 .queryParam("formatted", FORMATTED)
                                 .queryParam("username", USER_NAME)
                                 .queryParam("style", STYLE)
-                                .queryParam("lat", "10")
-                                .queryParam("lng", "20")
+                                .queryParam("lat", Lat)
+                                .queryParam("lng", Lng)
                         )
         );
     }
 
-    public static customerRegistration with() {
-        return instrumented(customerRegistration.class);
+    public static consumeService with(Integer Lng, Integer Lat) {
+        return instrumented(consumeService.class, Lng, Lat);
     }
 }

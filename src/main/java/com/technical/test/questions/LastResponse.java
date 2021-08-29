@@ -10,9 +10,4 @@ public class LastResponse {
         lastResponse().prettyPrint();
         return a -> lastResponse().statusCode() == code;
     }
-
-    /*public static Question<Boolean> messageResponse(String message){
-        ConverterJson xml = new ConverterJson();
-        return a -> xml.getValue(lastResponse().body().asString(), "message") == message;
-    }*/
 }
